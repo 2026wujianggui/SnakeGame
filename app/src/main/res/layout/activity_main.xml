@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#101418"
+    android:orientation="vertical">
+
+    <!-- 顶部计分栏 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#161C22"
+        android:orientation="horizontal"
+        android:paddingStart="18dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="18dp"
+        android:paddingBottom="10dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="得分"
+                android:textColor="#9AA7B2"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tvScore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="#2BE07A"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="最高分"
+                android:textColor="#9AA7B2"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tvBest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text="0"
+                android:textColor="#FFD166"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 游戏区 -->
+    <com.yuanbao.snake.SnakeView
+        android:id="@+id/game"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- 控制区 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#161C22"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <Button
+            android:id="@+id/btnMain"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:backgroundTint="#2BE07A"
+            android:text="开始"
+            android:textColor="#0B0F13"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnRestart"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:backgroundTint="#2A323B"
+            android:text="重来"
+            android:textColor="#E6EDF3" />
+    </LinearLayout>
+
+    <!-- 方向键 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#161C22"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingStart="14dp"
+        android:paddingEnd="14dp"
+        android:paddingBottom="18dp">
+
+        <Button
+            android:id="@+id/btnLeft"
+            android:layout_width="58dp"
+            android:layout_height="58dp"
+            android:backgroundTint="#2A323B"
+            android:text="◀"
+            android:textColor="#E6EDF3"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btnUp"
+                android:layout_width="58dp"
+                android:layout_height="58dp"
+                android:backgroundTint="#2A323B"
+                android:text="▲"
+                android:textColor="#E6EDF3"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/btnDown"
+                android:layout_width="58dp"
+                android:layout_height="58dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="#2A323B"
+                android:text="▼"
+                android:textColor="#E6EDF3"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnRight"
+            android:layout_width="58dp"
+            android:layout_height="58dp"
+            android:backgroundTint="#2A323B"
+            android:text="▶"
+            android:textColor="#E6EDF3"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+</LinearLayout>
